@@ -1,0 +1,32 @@
+﻿services:
+  postgres_general:
+    image: postgres:18.6-alpine3.24
+    container_name: postgres_general
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "${POSTGRES_GENERAL_PORT}:5432"
+    volumes:
+      - postgres_general:/var/lib/postgresql/data
+    networks:
+      - bookstoreNetwork
+  postgres_get:
+    image: postgres:18.6-alpine3.24
+    container_name: postgres_get
+    environment:
+      POSTGRES_DB: ${POSTGRES_GET_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "${POSTGRES_GET_PORT}:5432"
+    volumes:
+      - postgres_get:/var/lib/postgresql/data
+    networks:
+      - bookstoreNetwork
+volumes:
+  postgres_general:
+  postgres_get:
+networks:
+  bookstoreNetwork:

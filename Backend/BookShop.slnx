@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/Application/">
+    <Project Path="Application/BookShop.Application/BookShop.Application.csproj" />
+  </Folder>
+  <Folder Name="/Domain/">
+    <Project Path="Domain/BookShop.Domain/BookShop.Domain.csproj" />
+  </Folder>
+  <Folder Name="/Infrastructure/">
+    <Project Path="Infrastructure/BookShop.Infrastructure/BookShop.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="Tests/BookShop.E2E.Tests/BookShop.E2E.Tests.csproj" />
+    <Project Path="Tests/BookShop.Unit.Tests/BookShop.Unit.Tests.csproj" />
+    <Project Path="Tests/BooksShop.Integration.Tests/BooksShop.Integration.Tests.csproj" />
+  </Folder>
+  <Folder Name="/WebAPI/">
+    <Project Path="WebAPI/BookShop.WebAPI/BookShop.WebAPI.csproj" />
+  </Folder>
+</Solution>
